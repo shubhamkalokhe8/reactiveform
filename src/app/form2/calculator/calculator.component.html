@@ -1,0 +1,9 @@
+<form class="calculatorform" [formGroup]="calculation">
+<input type="number" formControlName="firstnumber">
+<input type="number" formControlName="second">
+<button (click)="addition()">Additiom</button>
+<button (click)="substraction()">Substraction</button>
+<button (click)="multiplication()">Multiplication</button>
+<button (click)="division()">Division</button>
+<h1>resul is:{{calculation.controls['result'].value}}</h1>
+</form>

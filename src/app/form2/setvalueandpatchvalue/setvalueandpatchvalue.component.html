@@ -1,0 +1,12 @@
+<p>setvalueandpatchvalue works!</p>
+<form [formGroup]="customer">
+    <pre>
+<input type="text" formControlName="username" placeholder="Enter User Name"> 
+<input type="text" formControlName="password" placeholder="Enter Password">
+<input type="text" formControlName="budget" placeholder="Enterb Budget">
+<input type="text" formControlName="income" placeholder="Enter Income" >
+<button (click)="showalldatainconsole()">Show Data OnConsole</button>
+<button (click)="usesetvalue()">Set Value</button>
+<button (click)="usepatchvalue()">Patch Customers Value</button>
+</pre>
+</form>

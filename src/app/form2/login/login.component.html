@@ -1,0 +1,35 @@
+
+<form class="signin" [formGroup]="registration" (ngSubmit)="onsubmit()">
+
+    <div *ngIf="registration.controls['fullname'].touched && registration.controls['fullname'].invalid">
+    <span *ngIf="registration.controls['fullname'].hasError('required')">**Enter full name</span>
+</div>
+<span *ngIf="registration.controls['fullname'].hasError('maxlength')">**maxlength exceed</span>
+<span *ngIf="registration.controls['fullname'].hasError('minlength')">**minimum length</span>
+<input type="text" formControlName="fullname" placeholder="Enter full name">
+
+<div *ngIf="registration.controls['age'].touched && registration.controls['age'].invalid">
+<span *ngIf="registration.controls['age'].hasError('required')">**Age is required</span>
+</div>
+<input type="text" formControlName="age" placeholder="Enter Age">
+<span *ngIf="registration.controls['age'].hasError('max') || registration.controls['age'].hasError('min')">**Age required in between 20 to 60</span>
+
+
+<input type="text" formControlName="username" placeholder="Enter User Name">
+<div *ngIf="registration.controls['username'].touched && registration.controls['username'].invalid" >
+<span *ngIf="registration.controls['username'].hasError('required')">** Username required</span>
+</div>
+<span *ngIf="registration.controls['username'].hasError('pattern')">**username only number</span>
+<div *ngIf="registration.controls['email'].touched && registration.controls['email'].invalid">
+<span *ngIf="registration.controls['email'].hasError('required')">** email id required</span>
+</div>
+<span *ngIf="registration.controls['email'].hasError('email')">** email id wrong</span>
+<input type="text" formControlName="email" placeholder="Enter email">
+
+<div *ngIf="registration.controls['contact'].touched && registration.controls['contact'].invalid">
+<span *ngIf="registration.controls['contact'].hasError('required')">** Contact is compulsary required</span>
+</div>
+<input type="text" formControlName="contact" placeholder="Enter Contact">
+<button [disabled]="!registration.valid">Submit</button>
+</form>
+{{registration.valid}}

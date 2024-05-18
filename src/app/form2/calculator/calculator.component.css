@@ -1,0 +1,25 @@
+.calculatorform{
+    background-color:green;
+    display: flex;
+    flex-direction: column;
+    width:0px;
+    height: 48px;
+    padding:400px;
+    margin-left:426px;
+    
+}
+button{
+    color: red;
+    width:100px;
+    margin: left 210px;
+    margin-top: 10px;
+    margin-left: 28px;
+    
+}
+input{
+    width: 150px;
+    background-color: maroon;
+    color: white;
+    
+
+}
